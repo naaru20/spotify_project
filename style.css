@@ -3,9 +3,7 @@
 
 body {
   background: linear-gradient(90deg, pink, skyblue);
-  /* background-image: url('guitar.png' );
-    background-size: 700px;
-    background-repeat: repeat-x; */
+  overflow-x: hidden;
 }
 * {
   margin: 0;
@@ -67,9 +65,6 @@ h1 {
 #masterbtn {
   padding: 0 50px;
 }
-/* .btn{
-  align-items: ;
-} */
 
 .button {
   color: white;
@@ -82,8 +77,10 @@ h1 {
 .songslist {
   display: flex;
   width: 40%;
+  height: 5vh;
   margin: 0 10px;
   align-items: center;
+  overflow: hidden;
   border: solid white;
   border-radius: 40px;
   justify-content: space-evenly;
@@ -126,6 +123,7 @@ span {
 .songname {
   position: absolute;
   left: 17vw;
+  bottom: 15px;
   color: #f9f3f3;
   display: flex;
   align-items: center;
@@ -133,3 +131,68 @@ span {
   opacity: 0;
   transition: opacity 0.4s ease-in;
 }
+
+@media only screen and (max-width: 1550px){
+  .time{
+    display: none;
+  }
+  .music {
+    position: absolute;
+  left: 50px;
+  width: 50%;
+}
+}
+
+
+@media only screen and (max-width: 1000px){
+  .songslist{
+    width: 80%;
+  }
+  .container {
+    height: 12vh;
+  }
+  .songname {
+    left: 37vw;
+  }
+
+}
+
+@media only screen and (max-width: 500px){
+  .playlist{
+    width: 100%;
+  }
+
+  .songslist{
+    width: 90%;
+  }
+
+  .image {
+    position: absolute;
+    left: -5px;
+}
+
+.music {
+  position: absolute;
+  left: 42px;
+}
+
+.time{
+  display: none ;
+}
+
+.container{
+  height: 10vh;
+}
+
+.songname{
+  left: 27vw;
+}
+
+.button{
+  margin-top: 10px;
+}
+.songname {
+  left: 26vw;
+}
+}
+
